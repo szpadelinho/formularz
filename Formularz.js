@@ -1,5 +1,6 @@
 import { View, Text, TextInput, Pressable, StyleSheet, ToastAndroid } from 'react-native'
 import {useState} from "react"
+import Header from './Header.js'
 
 const Formularz = () => {
 
@@ -46,7 +47,7 @@ const Formularz = () => {
 
     return(
         <View style={[styles.form, styles.shadow]}>
-            <Text style={{fontSize: 35, fontFamily: "Tahoma", margin: 15, marginBottom: 50, color: "#D9D9D9", textAlign: "center", fontWeight: 800}}>Formularz zgłoszeniowy</Text>
+            <Header/>
             <TextInput onChangeText={nameHandler} style={styles.paragraph} label="Imię" placeholder="Imię: "/>
             <TextInput onChangeText={surNameHandler} style={styles.paragraph} label="Nazwisko" placeholder="Nazwisko: "/>
             <TextInput onChangeText={ageHandler} style={styles.paragraph} label="Wiek" inputMode="numeric" placeholder="Wiek: "/>
