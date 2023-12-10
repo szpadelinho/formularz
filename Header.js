@@ -1,9 +1,11 @@
 import { Text, View, StyleSheet } from 'react-native';
 
-const Header = () => {
-    <View>
-        <Text style={styles.header}>doXXer</Text>
-    </View>
+const Header = ({title}) => {
+    return(
+        <View>
+            <Text style={styles.header}>{title}</Text>
+        </View>
+    )
 }
 
 const styles = {

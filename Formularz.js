@@ -1,4 +1,4 @@
-import { View, Text, TextInput, Pressable, StyleSheet, ToastAndroid } from 'react-native'
+import { View, Text, TextInput, Pressable, ToastAndroid } from 'react-native'
 import {useState} from "react"
 import Header from './Header.js'
 
@@ -39,7 +39,6 @@ const Formularz = () => {
     function telephoneHandler(text){
         setTelephone(text)
     }
-
     function showData(){
         let data = `Nazywasz się ${name} ${surName}, masz ${age} lat, mieszkasz w ${adress}, twój adres e-mail to ${email}, a twój numer telefonu to ${telephone}`
         ToastAndroid.show(data, ToastAndroid.LONG)
@@ -47,7 +46,7 @@ const Formularz = () => {
 
     return(
         <View style={[styles.form, styles.shadow]}>
-            <Header/>
+            <Header title={"Formulejrorz"}/>
             <TextInput onChangeText={nameHandler} style={styles.paragraph} label="Imię" placeholder="Imię: "/>
             <TextInput onChangeText={surNameHandler} style={styles.paragraph} label="Nazwisko" placeholder="Nazwisko: "/>
             <TextInput onChangeText={ageHandler} style={styles.paragraph} label="Wiek" inputMode="numeric" placeholder="Wiek: "/>
